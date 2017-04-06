@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+
+<html >
+<head>
+    <meta charset="utf-8" />
+    <title> The Game Shop</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+
+
+
+</head>
+
+<body background="Images/background.jpg">
+
+    <div style="text-align: center">
+		<br><img src="images/Logo.png" width="300" alt="The Game Shop" class="align-center"><br>
+    </div>
+
+    <div id="menubar">
+        <div class="menu">&nbsp;<a href="Home.html">HOME</a>&nbsp;
+        </div>
+
+        <div class="menu">GAMES&nbsp;
+            <ul>
+                <li><a href="PSgames.html">PlayStation 4</a></li>
+                <li><a href="XBOXgames.html">Xbox One</a></li>
+                <li><a href="PCgames.html">PC games</a></li>
+            </ul>
+        </div>
+
+        <div class="menu"><a href="a.html">PAGENAME</a>&nbsp;
+        </div>
+
+        <div class="menu">PAGENAME&nbsp;
+            <ul>
+                <li><a href="a.html">PageName</a></li>
+                <li><a href="a.html">PageName</a></li>
+            </ul>
+        </div>
+
+        <div class="menu">PAGENAME&nbsp;
+            <ul>
+                <li><a href="a.html">PageName</a></li>
+                <li><a href="a.html">PageName</a></li>
+                <li><a href="a.html">PageName & PageName</a></li>
+            </ul>
+        </div>
+
+        <div class="menu"><a href="account.html">ACCOUNT</a>
+			<ul>
+				<li><a href="login.html">Login</a></li>
+            <li><a href="a.html">Your Cart</a></li>
+            </ul>
+        </div>
+    </div><br><br>
+
+    <div id="main_body">
+        <section id="page_body">
+			<div id="header" style="text-align: center">
+				<img id="image1" width="980"/>
+			</div>
+			
+            <article>
+                <p><i>Welcome to the Game shop</i></p>
+                <br>
+
+                <img src="images/coupon.jpg" width="500" height="250" alt="Room" class="align-left" style="box-shadow: 15px 15px 15px #888888">
+                <p>Browse Some of the worlds <u><b>BEST</u></b> games for some of the world's <u><b>BEST</u></b> prices. <br><br> Choose between:</p>
+                
+                
+                <br>
+                <ul>
+                    <li><a style="color: blue" href="PSgames.html">Playstation 4</a></li>
+                    <li><a style="color: blue" href="XBOXgames.html">Xbox One</a></li>
+                    <li><a style="color: blue" href="PCgames.html">Or PC</a></li>
+                </ul>
+                <br>
+                <p>Use coupon code <b>SAVE25</b> for a massive 25% off your order. View our other pages for more information.</p>
+                <br style="clear: left" >
+
+            </article>
+			
+			<div id="featured">
+				<p><br><br><i>Featured Games</i></p>
+				<br>
+				<div class="featuredGames">
+					<p></p>
+				</div>
+				<div class="featuredGames">
+					<p></p>
+				</div>
+				<div class="featuredGames">
+					<p></p>
+				</div>
+				<div class="featuredGames">
+					<p></p>
+				</div>
+			
+			</div>
+
+        </section>
+
+        <div style="text-align: center">
+
+            <a href="Signup.html"><img src="images/Signup.png" height="300" width="300" alt="Sign Up" />
+
+        </div>
+		
+		<!--Footer bar with social media links.-->
+		<div id="footer">	
+			<ul id="icons">
+				<li></li>
+				<li><a href="https://plus.google.com/" target="_blank"><img src="images/googleIcon.png" alt="Google+" width="28"/></a></li>
+				<li><a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedInIcon.png" alt="LinkedIn" width="28"/></a></li>
+				<li><a href="https://twitter.com/?lang=en" target="_blank"><img src="images/twitterIcon.png" alt="Twitter" width="28"/></a></li>
+				<li><a href="https://www.facebook.com/" target="_blank"><img src="images/facebookIcon.png" alt="Facebook" width="28"/></a></li>
+				<li>© The Game Shop</li>
+			</ul>
+		</div>
+
+    </div>
+	
+	<script>
+			//Produce Random Image on refresh of page.
+			var i, j;
+			var arr = [1, 2, 3];
+			shuffle(arr);
+			
+			function shuffle(arr)
+			{
+				for (i = arr.length; i; i--) 
+				{
+					j = Math.floor(Math.random() * i);
+					[arr[i - 1], arr[j]] = [arr[j], arr[i - 1]];
+				}
+				document.getElementById("image1").src = "images/" + arr.pop() + ".jpg";
+			}
+		</script>
+
+</body>
+</html>

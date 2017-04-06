@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+
+<html >
+<head>
+    <meta charset="utf-8" />
+    <title> The Game Shop</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+
+
+
+</head>
+
+<body background="Images/background.jpg">
+
+    <div style="text-align: center">
+		<br><img src="images/Logo.png" width="300" alt="The Game Shop" class="align-center"><br>
+    </div>
+
+    <div id="menubar">
+        <div class="menu">&nbsp;<a href="Home.html">Home</a>&nbsp;
+        </div>
+
+        <div class="menu">Games&nbsp;
+            <ul>
+                <li><a href="PSgames.html">PlayStation 4</a></li>
+                <li><a href="XBOXgames.html">Xbox One</a></li>
+                <li><a href="PCgames.html">PC games</a></li>
+            </ul>
+        </div>
+
+        <div class="menu"><a href="a.html">PageName</a>&nbsp;
+        </div>
+
+        <div class="menu">PageName&nbsp;
+            <ul>
+                <li><a href="Menu.html">PageName</a></li>
+                <li><a href="Restaurant.html">PageName</a></li>
+            </ul>
+        </div>
+
+        <div class="menu"><a href="a.html">PageName & PageName</a>&nbsp;
+            <ul>
+                <li><a href="a.html">PageName</a></li>
+                <li><a href="a.html">PageName</a></li>
+                <li><a href="a.html">PageName & PageName</a></li>
+            </ul>
+        </div>
+
+        <div class="menu"><a href="account.html">Account</a>
+			<ul>
+				<li><a href="login.html">Login</a></li>
+            <li><a href="a.html">Your Cart</a></li>
+            </ul>
+        </div>
+    </div><br><br>
+      <div id="main_body">
+        <section id="page_body">
+
+            <article>
+                <p style="font-weight: bold"><i>Log-in to your account</i></p>
+                <br>
+                <fieldset><legend>Log-In</legend>
+                    <br>
+                    First Name: <input id="loginfirstname" type="text" name="logfirstname" size="25" maxlength="25" /> &nbsp; &nbsp;
+
+                    Last Name: <input id="loginlastname" type="text" name="loglastname" size="25" maxlength="25" /> &nbsp; &nbsp;
+                    <br><br>
+                    Password: <input id="loginpassword" name="logpassword" type="password" size="25" maxlength="15"  /> &nbsp; &nbsp; &nbsp;
+                    <br><br>
+                    <button onclick="signin()">Login</button>
+
+                </fieldset>
+                <P>Not Signed up Yet? <a style="color: blue" href="Signup.html" >Click here</a></P>
+
+
+                <br style="clear: left" >
+
+            </article>
+
+        </section>
+          
+        <!--Footer bar with social media links.-->
+		<div id="footer">	
+			<ul id="icons">
+				<li></li>
+				<li><a href="https://plus.google.com/" target="_blank"><img src="images/googleIcon.png" alt="Google+" width="28"/></a></li>
+				<li><a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedInIcon.png" alt="LinkedIn" width="28"/></a></li>
+				<li><a href="https://twitter.com/?lang=en" target="_blank"><img src="images/twitterIcon.png" alt="Twitter" width="28"/></a></li>
+				<li><a href="https://www.facebook.com/" target="_blank"><img src="images/facebookIcon.png" alt="Facebook" width="28"/></a></li>
+				<li>© The Game Shop</li>
+			</ul>
+		</div>
+        
+          <script>
+              
+            function signin(){
+            var firstlog= document.getElementById("loginfirstname").value;
+		    localStorage.setItem("FirstNamelogin",firstlog);
+            
+            var lastlog= document.getElementById("loginlastname").value;
+		    localStorage.setItem("LastNamelogin",lastlog);
+              
+            var pwlog= document.getElementById("loginpassword").value;
+		    localStorage.setItem("Passwordlogin",pwlog);
+                
+            location.replace("home.html");
+                
+            }
+
+          
+          
+          </script>>
+    
+    </body>
+</html>
