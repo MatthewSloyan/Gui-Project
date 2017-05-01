@@ -39,7 +39,7 @@
     <section id="signup_body">
         <article>
             <form name="signupform">
-                <p>Please fill out all fields of information in order to create account.</p>
+                <p>Make changes to your account Information.</p>
                 <br/>
 
                 <fieldset><legend>Personal Information</legend>
@@ -109,15 +109,15 @@
                 <br><textarea id="otherinfo" name="otherinfo" rows="8" cols="80"></textarea>
                 <br>
                 <br>
-                <p>By clicking 'Submit', you agree that all information provided is correct.</p>
+                <p>Submitting will make changes to your account's information</p>
                 <br>
                 <button id="submitbutton" onclick="submitDetails()">Submit</button>
-                <button id="resetbutton" onclick="resetDetails()">Reset</button>
+                
             </form>
         </article>
 
         <article>
-            <br><p><a href="#top" style="color:black"><u>Return to Top</u></a></p>
+            <br><p><a href="account.html" style="color:black"><u>Return to Account</u></a</p>
         </article>
 
     </section>	
@@ -134,7 +134,7 @@
 	</div>
     
     <script>
-        //submit details and saving
+        //check for empty fields
         function submitDetails(){
             
             saveDetails();
@@ -192,26 +192,22 @@
             var other= document.getElementById("otherinfo").value;
 		    localStorage.setItem("tempOther Information",other); 
             
-            //ensure no blank spaces
             var hasEmpty = emptyFields();
             
-            if(!hasEmpty){
-                console.log("empty"); 
-            }
             //password Validation
+            if(!hasEmpty){
+               
+            }
             if(pw != pwc)
             {
                alert("Passwords do not Match"); 
-                console.log("pass");
+                
             }
             if(hasEmpty&&(pw == pwc)){
                 resetDetails();
-                console.log("everything correct");
-                
             }
         }
         
-		//reset details,by clearing temp variables before they are saved,also used when all info is correct
         function resetDetails(){
             console.log("reset details");
             localStorage.removeItem("tempFirstName");
@@ -233,7 +229,6 @@
             
         }
         
-		//load information back, so information is not lost when user fails to fulfil all requested elements
         function loadDetails(){
             loggedIn();
             
@@ -281,7 +276,7 @@
                 return false;
             }
             else if(document.getElementById("dateofbirth").value==""){
-                alert("Please Fill out all required fields");
+                alert("Please Fill out all required fields"); 
                 return false;
             }
             else if(document.getElementById("email").value==""){
@@ -293,7 +288,7 @@
                 return false;
             }
             else if(document.getElementById("confirm").value==""){
-                alert("Please Fill out all required fields");
+                alert("Please Fill out all required fields"); 
                 return false;
             }
             else if(document.getElementById("phoneNum").value==""){
@@ -337,7 +332,7 @@
             
         }
         
-		//save details to localstorage
+		//re-save details, by overwriting current ones
         function saveDetails(){
             
             //save storage
@@ -378,7 +373,7 @@
             var cr= document.getElementById("country").value;
 		    localStorage.setItem("Address Country",cr);
             
-            //payment storage
+             //payment storage
             var cardnum= document.getElementById("cardnumber").value;
 		    localStorage.setItem("Payment Card Number",cardnum);
             
@@ -414,6 +409,7 @@
 			}  
 		}
 
+		//check if logged in
         function loggedIn() { 
                 var isLoggedIn = localStorage.getItem("LoggedIn");
                 
@@ -422,6 +418,9 @@
                 }
                 
         }
+               
+                
+            
     </script>
 
 </body>
